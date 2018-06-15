@@ -30,11 +30,11 @@ public class PlatformerMovement : MonoBehaviour {
             rotation *= Quaternion.Euler(Vector3.up * angularSpeed * Time.fixedDeltaTime);
         }
         if(horizontalDirection != 0){
-            movement += Vector3.right * horizontalSpeed * horizontalDirection * Time.fixedDeltaTime;
+            movement += transform.right * horizontalSpeed * horizontalDirection * Time.fixedDeltaTime;
         }
         if (verticalDirection != 0)
         {
-            movement += Vector3.forward * horizontalSpeed * verticalDirection * Time.fixedDeltaTime;
+            movement += transform.forward * horizontalSpeed * verticalDirection * Time.fixedDeltaTime;
         }
 
         rbd3d.MovePosition(movement);
